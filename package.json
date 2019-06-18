@@ -1,0 +1,20 @@
+{
+  "name": "oebb-graphql",
+  "version": "0.0.1",
+  "description": "An Apollo GraphQL micro-server implementation test using hafas-client.",
+  "main": "index.js",
+  "repository": "https://github.com/timhagn/oebb-graphql.git",
+  "author": "Tim Hagn",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "apollo-server-micro": "^2.6.3",
+    "graphql": "^14.3.1",
+    "hafas-client": "^4.2.1",
+    "micro": "^9.3.4",
+    "micro-cors": "^0.1.1"
+  },
+  "scripts": {
+    "start": "micro"
+  }
+}
