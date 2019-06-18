@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`[OebbAPI] getLocations() returns array with names "Wien" 1`] = `
+exports[`[OebbAPI] getLocations() returns array with name "Wien" 1`] = `
 Array [
   Object {
     "geo": Object {

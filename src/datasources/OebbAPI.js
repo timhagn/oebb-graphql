@@ -35,7 +35,7 @@ class OebbAPI extends DataSource {
     // Transform the raw location to what Location expects.
     return Array.isArray(locations)
       ? locations
-          .filter(location => location.name)
+          .filter(location => location.name !== ``)
           .map(location => this.locationReducer(location))
       : []
   }
