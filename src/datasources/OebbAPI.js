@@ -37,6 +37,12 @@ class OebbAPI extends DataSource {
       ? locations.map(location => this.locationReducer(location))
       : []
   }
+
+  async isHealthy() {
+    const wienWest = '1290401'
+    const result = await hafasClient.stop(wienWest)
+    return result.id === wienWest
+  }
 }
 
 module.exports = OebbAPI
