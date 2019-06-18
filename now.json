@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "builds": [{ "src": "index.js", "use": "@now/node" }],
-  "routes": [{ "src": "/.*", "dest": "index.js" }],
+  "builds": [{ "src": "src/index.js", "use": "@now/node-server" }],
+  "routes": [{ "src": "/.*", "dest": "src/index.js" }],
   "regions": ["zrh", "bru", "cdg"]
 }

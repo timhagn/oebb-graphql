@@ -1,0 +1,117 @@
+[
+  {
+    "type": "stop",
+    "id": "1190100",
+    "name": "Wien",
+    "location": {
+      "type": "location",
+      "id": "1190100",
+      "latitude": 48.208547,
+      "longitude": 16.372134
+    },
+    "products": {
+      "nationalExpress": true,
+      "national": true,
+      "interregional": true,
+      "regional": true,
+      "suburban": true,
+      "bus": true,
+      "ferry": false,
+      "subway": false,
+      "tram": true,
+      "onCall": true
+    }
+  },
+  {
+    "type": "stop",
+    "id": "1290401",
+    "name": "Wien Hbf (U)",
+    "location": {
+      "type": "location",
+      "id": "1290401",
+      "latitude": 48.185507,
+      "longitude": 16.375326
+    },
+    "products": {
+      "nationalExpress": true,
+      "national": true,
+      "interregional": true,
+      "regional": true,
+      "suburban": true,
+      "bus": true,
+      "ferry": false,
+      "subway": true,
+      "tram": true,
+      "onCall": false
+    }
+  },
+  {
+    "type": "stop",
+    "id": "1191201",
+    "name": "Wien Meidling",
+    "location": {
+      "type": "location",
+      "id": "1191201",
+      "latitude": 48.174559,
+      "longitude": 16.333211
+    },
+    "products": {
+      "nationalExpress": true,
+      "national": true,
+      "interregional": true,
+      "regional": true,
+      "suburban": true,
+      "bus": true,
+      "ferry": false,
+      "subway": true,
+      "tram": true,
+      "onCall": false
+    }
+  },
+  {
+    "type": "stop",
+    "id": "1291201",
+    "name": "Wien Meidling Bahnhof (U)",
+    "location": {
+      "type": "location",
+      "id": "1291201",
+      "latitude": 48.174433,
+      "longitude": 16.331926
+    },
+    "products": {
+      "nationalExpress": true,
+      "national": true,
+      "interregional": true,
+      "regional": true,
+      "suburban": true,
+      "bus": true,
+      "ferry": false,
+      "subway": true,
+      "tram": true,
+      "onCall": false
+    }
+  },
+  {
+    "type": "stop",
+    "id": "1490191",
+    "name": "Wien Zentrum",
+    "location": {
+      "type": "location",
+      "id": "1490191",
+      "latitude": 48.208709,
+      "longitude": 16.372305
+    },
+    "products": {
+      "nationalExpress": false,
+      "national": false,
+      "interregional": false,
+      "regional": true,
+      "suburban": true,
+      "bus": true,
+      "ferry": false,
+      "subway": true,
+      "tram": false,
+      "onCall": false
+    }
+  }
+]
