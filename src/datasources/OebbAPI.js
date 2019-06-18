@@ -28,19 +28,21 @@ class OebbAPI extends DataSource {
     }
   }
 
-  async getLocations(name = ``) {
+  async getLocations(name) {
     if (!name) return []
     const locations = await this.hafasClient.locations(name)
 
-    // transform the raw launches to a more friendly
+    // Transform the raw location to what Location expects.
     return Array.isArray(locations)
-      ? locations.map(location => this.locationReducer(location))
+      ? locations
+          .filter(location => location.name)
+          .map(location => this.locationReducer(location))
       : []
   }
 
   async isHealthy() {
     const wienWest = '1290401'
-    const result = await hafasClient.stop(wienWest)
+    const result = await this.hafasClient.stop(wienWest)
     return result.id === wienWest
   }
 }

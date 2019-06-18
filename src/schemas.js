@@ -6,9 +6,9 @@ const typeDefs = gql`
   }
 
   type Location {
-      id: ID
-      type: String
-      name: String  
+      id: ID!
+      type: String!
+      name: String!  
       products: Products
       geo: GeoLocation
   }
