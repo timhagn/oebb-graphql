@@ -63,9 +63,13 @@ class OebbAPI extends DataSource {
     return isObject(stop) ? this.locationReducer(stop) : {}
   }
 
+  /**
+   * Queries for stop Wien and returns success or failure.
+   * @return {Promise<boolean>}
+   */
   async isHealthy() {
     const wienWest = '1290401'
-    const result = await this.hafasClient.stop(wienWest)
+    const result = await this.getStopInfo(wienWest)
     return result.id === wienWest
   }
 }
