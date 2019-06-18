@@ -16,9 +16,11 @@
     "micro-cors": "^0.1.1"
   },
   "scripts": {
+    "format": "prettier --write \"src/*.js\"",
     "start": "micro",
-    "test": "jest",
-    "test:update": "jest -u --coverage"
+    "test": "jest -i",
+    "test:coverage": "jest -i --coverage",
+    "test:update": "jest -i --updateSnapshot"
   },
   "devDependencies": {
     "jest": "^24.8.0",

@@ -2,6 +2,8 @@ const { DataSource } = require('apollo-datasource')
 const createClient = require('hafas-client')
 const oebbProfile = require('hafas-client/p/oebb')
 
+const { isObject } = require('../utils')
+
 class OebbAPI extends DataSource {
   constructor() {
     super()
@@ -18,6 +20,11 @@ class OebbAPI extends DataSource {
     this.context = config.context
   }
 
+  /**
+   * Reduces a given location to its GraphQL pendant.
+   * @param location  Object  Given location object.
+   * @return {{geo: *, name: *, id: *, type: *, products: *}}
+   */
   locationReducer(location) {
     return {
       id: location.id,
@@ -28,16 +35,32 @@ class OebbAPI extends DataSource {
     }
   }
 
+  /**
+   * Queries HAFAS for a given location name.
+   * @param name  string
+   * @return {Promise<Array>}
+   */
   async getLocations(name) {
     if (!name) return []
     const locations = await this.hafasClient.locations(name)
 
     // Transform the raw location to what Location expects.
     return Array.isArray(locations)
-      ? locations
-          .filter(location => location.name !== ``)
-          .map(location => this.locationReducer(location))
+      ? locations.map(location => this.locationReducer(location))
       : []
+  }
+
+  /**
+   * Queries HAFAS for information about a given location id.
+   * @param id  Number  IBNR to display info about.
+   * @return {Promise<Object>}
+   */
+  async getStopInfo(id) {
+    if (!id) return {}
+    const stop = await this.hafasClient.stop(id)
+
+    // Transform the raw location to what Stop expects.
+    return isObject(stop) ? this.locationReducer(stop) : {}
   }
 
   async isHealthy() {
