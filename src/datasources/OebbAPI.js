@@ -64,13 +64,13 @@ class OebbAPI extends DataSource {
   }
 
   /**
-   * Queries for stop Wien and returns success or failure.
+   * Queries for stop "Wien Hbf" and returns success or failure.
    * @return {Promise<boolean>}
    */
   async isHealthy() {
-    const wienWest = '1290401'
-    const result = await this.getStopInfo(wienWest)
-    return result.id === wienWest
+    const wienHbf = '1290401'
+    const result = await this.getStopInfo(wienHbf)
+    return result.id === wienHbf
   }
 }
 

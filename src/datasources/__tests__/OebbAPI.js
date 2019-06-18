@@ -35,32 +35,8 @@ describe('[OebbAPI].getStopInfo', () => {
   })
 
   it('getStopInfo() returns object for id', async () => {
-    const wienWest = '1290401'
-    const locations = await oebbAPI.getStopInfo(wienWest)
-    expect(locations).toMatchInlineSnapshot(`
-      Object {
-        "geo": Object {
-          "id": "1290401",
-          "latitude": 48.185507,
-          "longitude": 16.375326,
-          "type": "location",
-        },
-        "id": "1290401",
-        "name": "Wien Hbf (U)",
-        "products": Object {
-          "bus": true,
-          "ferry": false,
-          "interregional": true,
-          "national": true,
-          "nationalExpress": true,
-          "onCall": false,
-          "regional": true,
-          "suburban": true,
-          "subway": true,
-          "tram": true,
-        },
-        "type": "stop",
-      }
-    `)
+    const wienHbf = '1290401'
+    const locations = await oebbAPI.getStopInfo(wienHbf)
+    expect(locations).toMatchSnapshot()
   })
 })
