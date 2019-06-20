@@ -9,5 +9,9 @@ const dataSources = () => ({
 const typeDefs = require(`./schemas`)
 const resolvers = require(`./resolvers`)
 
-const apolloServer = new ApolloServer({ typeDefs, resolvers, dataSources })
+const apolloServer = new ApolloServer({
+  typeDefs,
+  resolvers,
+  dataSources,
+})
 module.exports = cors(apolloServer.createHandler())
