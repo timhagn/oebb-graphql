@@ -3,7 +3,7 @@ const { gql } = require(`apollo-server-micro`)
 const typeDefs = gql`
     type Query {
         locations(name: String!): [Location]
-        stop(id: ID!): Location
+        stop(id: ID!): Location!
     }
 
     type Location {
