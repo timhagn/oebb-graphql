@@ -75,13 +75,14 @@ class OebbAPI extends DataSource {
 
   /**
    * Queries HAFAS for information about a given location id.
-   * @param from  Number  IBNR to start from.
-   * @param to    Number  IBNR to journey to.
+   * @param from      Number  IBNR to start from.
+   * @param to        Number  IBNR to journey to.
+   * @param options   Object  Optional options (earlierThan & laterThen).
    * @return {Promise<Object>}
    */
-  async getJourneys(from, to) {
+  async getJourneys(from, to, options) {
     if (!from || !to) return {}
-    const journeyObject = await this.hafasClient.journeys(from, to)
+    const journeyObject = await this.hafasClient.journeys(from, to, options)
 
     return this.journeysReducer(journeyObject)
   }
@@ -89,7 +90,7 @@ class OebbAPI extends DataSource {
   /**
    * Reduces a given journey object to its GraphQL pendant.
    * @param journeyObject   Object  A HAFAS journey object.
-   * @return {{journeys: void, laterRef: *, earlierRef: *}}
+   * @return {{journeys: array, laterRef: *, earlierRef: *}}
    */
   journeysReducer(journeyObject) {
     const journeys = journeyObject.journeys.map(journey =>
@@ -105,7 +106,7 @@ class OebbAPI extends DataSource {
   /**
    * Reduces an individual journey to its GraphQL pendant.
    * @param journey   Object  Given journey object.
-   * @return {{legs: *, type: *, refreshToken: *}}
+   * @return {{legs: array, type: string, refreshToken: string}}
    */
   journeyReducer(journey) {
     const legs = journey.legs.map(leg => this.legReducer(leg))

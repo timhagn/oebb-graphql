@@ -6,7 +6,12 @@ const typeDefs = gql`
   type Query {
     locations(name: String!): [Location]
     stop(id: ID!): Location!
-    journeys(from: ID!, to: ID!): Journeys
+    journeys(
+      from: ID!
+      to: ID!
+      earlierThan: String
+      laterThan: String
+    ): Journeys
   }
 
   type Location {
@@ -39,16 +44,16 @@ const typeDefs = gql`
 
   type Journeys {
     earlierRef: String
-    laterRef: String  
+    laterRef: String
     journeys: [Journey]
   }
-  
+
   type Journey {
     type: String
-    legs: [JourneyLeg]   
-    refreshToken: String  
+    legs: [JourneyLeg]
+    refreshToken: String
   }
-  
+
   type JourneyLeg {
     origin: Location
     destination: Location
@@ -58,12 +63,12 @@ const typeDefs = gql`
     tripId: String
     line: Line
     walking: Boolean
-    distance: Int  
+    distance: Int
     direction: String
     arrivalPlatform: String
-    departurePlatform: String  
+    departurePlatform: String
   }
-  
+
   type Line {
     type: String
     id: ID
@@ -74,12 +79,12 @@ const typeDefs = gql`
     product: String
     operator: Operator
   }
-  
+
   type Operator {
     type: String
     id: ID
-    name: String      
-  } 
+    name: String
+  }
 `
 
 module.exports = typeDefs
