@@ -1,4 +1,9 @@
+const {
+  GraphQLDateTime,
+} = require("graphql-iso-date")
+
 const resolvers = {
+  DateTime: GraphQLDateTime,
   Query: {
     locations: async (_, { name }, { dataSources }) => {
       return await dataSources.oebbAPI.getLocations(name)
