@@ -21,6 +21,16 @@ class OebbAPI extends DataSource {
   }
 
   /**
+   * Queries for stop "Wien Hbf" and returns success or failure.
+   * @return {Promise<boolean>}
+   */
+  async isHealthy() {
+    const wienHbf = '1290401'
+    const result = await this.getStopInfo(wienHbf)
+    return result.id === wienHbf
+  }
+
+  /**
    * Queries HAFAS for a given location name.
    * @param name  string
    * @return {Promise<Array>}
@@ -48,33 +58,6 @@ class OebbAPI extends DataSource {
     return isObject(stop) ? this.locationReducer(stop) : {}
   }
 
-  async getJourneys(from, to) {
-    if (!from || !to) return []
-    const journeys = await this.hafasClient.journeys(from, to)
-
-    let journeyArray = []
-    // TODO: Create correct relations for legs...
-    isObject(journeys) &&
-      Array.isArray(journeys.journeys) &&
-      journeys.journeys.map(
-        journey =>
-          Array.isArray(journey.legs) &&
-          journey.legs.map(leg => journeyArray.push(this.journeyReducer(leg)))
-      )
-
-    return journeyArray
-  }
-
-  /**
-   * Queries for stop "Wien Hbf" and returns success or failure.
-   * @return {Promise<boolean>}
-   */
-  async isHealthy() {
-    const wienHbf = '1290401'
-    const result = await this.getStopInfo(wienHbf)
-    return result.id === wienHbf
-  }
-
   /**
    * Reduces a given location to its GraphQL pendant.
    * @param location  Object  Given location object.
@@ -91,16 +74,98 @@ class OebbAPI extends DataSource {
   }
 
   /**
-   * Reduces a given journey to its GraphQL pendant.
+   * Queries HAFAS for information about a given location id.
+   * @param from  Number  IBNR to start from.
+   * @param to    Number  IBNR to journey to.
+   * @return {Promise<Object>}
+   */
+  async getJourneys(from, to) {
+    if (!from || !to) return {}
+    const journeyObject = await this.hafasClient.journeys(from, to)
+
+    return this.journeysReducer(journeyObject)
+  }
+
+  /**
+   * Reduces a given journey object to its GraphQL pendant.
+   * @param journeyObject   Object  A HAFAS journey object.
+   * @return {{journeys: void, laterRef: *, earlierRef: *}}
+   */
+  journeysReducer(journeyObject) {
+    const journeys = journeyObject.journeys.map(journey =>
+      this.journeyReducer(journey)
+    )
+    return {
+      earlierRef: journeyObject.earlierRef,
+      laterRef: journeyObject.laterRef,
+      journeys,
+    }
+  }
+
+  /**
+   * Reduces an individual journey to its GraphQL pendant.
    * @param journey   Object  Given journey object.
-   * @return {{arrival: (*|null), origin: {geo: *, name: *, id: *, type: *, products: *}, destination: {geo: *, name: *, id: *, type: *, products: *}, departure: (*|null)}}
+   * @return {{legs: *, type: *, refreshToken: *}}
    */
   journeyReducer(journey) {
+    const legs = journey.legs.map(leg => this.legReducer(leg))
     return {
-      origin: this.locationReducer(journey.origin),
-      destination: this.locationReducer(journey.destination),
-      departure: journey.departure,
-      arrival: journey.arrival,
+      type: journey.type,
+      legs,
+      refreshToken: journey.refreshToken,
+    }
+  }
+
+  /**
+   * Reduces a given journey leg to its GraphQL pendant.
+   * @param leg   Object  Given journey leg object.
+   * @return {{arrival: (*|null), origin: {geo: *, name: *, id: *, type: *, products: *}, destination: {geo: *, name: *, id: *, type: *, products: *}, departure: (*|null)}}
+   */
+  legReducer(leg) {
+    return {
+      origin: this.locationReducer(leg.origin),
+      destination: this.locationReducer(leg.destination),
+      departure: leg.departure,
+      arrival: leg.arrival,
+      reachable: leg.reachable,
+      tripId: leg.tripId,
+      line: leg.line ? this.lineReducer(leg.line) : {},
+      walking: !!leg.walking,
+      distance: leg.walking && leg.distance ? leg.distance : 0,
+      direction: leg.direction,
+      arrivalPlatform: leg.arrivalPlatform,
+      departurePlatform: leg.departurePlatform,
+    }
+  }
+
+  /**
+   * Reduces a given line to its GraphQL pendant.
+   * @param line  Object  Given line object.
+   * @return {{mode: *, product: (*|string), fahrtNr: *, public: (*|boolean), name: *, id: *, type: *, operator: {name: *, id: *, type: *}}}
+   */
+  lineReducer(line) {
+    return {
+      type: line.type,
+      id: line.id,
+      fahrtNr: line.fahrtNr,
+      name: line.name,
+      public: line.public,
+      mode: line.mode,
+      product: line.product,
+      operator: this.operatorReducer(line.operator),
+    }
+  }
+
+  /**
+   * Reduces a given operator to its GraphQL pendant.
+   * @param operator  Object  Given operator object.
+   * @return {{name: *, id: *, type: *}}
+   */
+  operatorReducer(operator) {
+    return {
+      type: operator.type,
+      id: operator.id,
+      name: operator.name,
     }
   }
 }

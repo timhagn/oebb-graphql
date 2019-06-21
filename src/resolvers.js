@@ -1,6 +1,6 @@
 const {
   GraphQLDateTime,
-} = require("graphql-iso-date")
+} = require(`graphql-iso-date`)
 
 const resolvers = {
   DateTime: GraphQLDateTime,
