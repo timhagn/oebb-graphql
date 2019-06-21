@@ -11,6 +11,7 @@
     "apollo-datasource": "^0.5.0",
     "apollo-server-micro": "^2.6.3",
     "graphql": "^14.3.1",
+    "graphql-type-datetime": "^0.2.4",
     "hafas-client": "^4.2.1",
     "micro": "^9.3.4",
     "micro-cors": "^0.1.1",

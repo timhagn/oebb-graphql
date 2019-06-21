@@ -1,9 +1,12 @@
 const { gql } = require(`apollo-server-micro`)
 
 const typeDefs = gql`
+    scalar DateTime
+    
     type Query {
         locations(name: String!): [Location]
         stop(id: ID!): Location!
+        journeys(from: ID!, to: ID!): [Journey]
     }
 
     type Location {
@@ -32,6 +35,13 @@ const typeDefs = gql`
         subway: Boolean!
         tram: Boolean!
         onCall: Boolean!
+    }
+  
+    type Journey {
+        origin: Location
+        destination: Location
+        departure: String
+        arrival: String
     }
 `
 

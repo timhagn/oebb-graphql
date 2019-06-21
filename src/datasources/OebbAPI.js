@@ -21,21 +21,6 @@ class OebbAPI extends DataSource {
   }
 
   /**
-   * Reduces a given location to its GraphQL pendant.
-   * @param location  Object  Given location object.
-   * @return {{geo: *, name: *, id: *, type: *, products: *}}
-   */
-  locationReducer(location) {
-    return {
-      id: location.id,
-      name: location.name,
-      type: location.type,
-      geo: location.location,
-      products: location.products,
-    }
-  }
-
-  /**
    * Queries HAFAS for a given location name.
    * @param name  string
    * @return {Promise<Array>}
@@ -63,6 +48,23 @@ class OebbAPI extends DataSource {
     return isObject(stop) ? this.locationReducer(stop) : {}
   }
 
+  async getJourneys(from, to) {
+    if (!from || !to) return []
+    const journeys = await this.hafasClient.journeys(from, to)
+
+    let journeyArray = []
+    // TODO: Create correct relations for legs...
+    isObject(journeys) &&
+      Array.isArray(journeys.journeys) &&
+      journeys.journeys.map(
+        journey =>
+          Array.isArray(journey.legs) &&
+          journey.legs.map(leg => journeyArray.push(this.journeyReducer(leg)))
+      )
+
+    return journeyArray
+  }
+
   /**
    * Queries for stop "Wien Hbf" and returns success or failure.
    * @return {Promise<boolean>}
@@ -71,6 +73,35 @@ class OebbAPI extends DataSource {
     const wienHbf = '1290401'
     const result = await this.getStopInfo(wienHbf)
     return result.id === wienHbf
+  }
+
+  /**
+   * Reduces a given location to its GraphQL pendant.
+   * @param location  Object  Given location object.
+   * @return {{geo: *, name: *, id: *, type: *, products: *}}
+   */
+  locationReducer(location) {
+    return {
+      id: location.id,
+      name: location.name,
+      type: location.type,
+      geo: location.location,
+      products: location.products,
+    }
+  }
+
+  /**
+   * Reduces a given journey to its GraphQL pendant.
+   * @param journey   Object  Given journey object.
+   * @return {{arrival: (*|null), origin: {geo: *, name: *, id: *, type: *, products: *}, destination: {geo: *, name: *, id: *, type: *, products: *}, departure: (*|null)}}
+   */
+  journeyReducer(journey) {
+    return {
+      origin: this.locationReducer(journey.origin),
+      destination: this.locationReducer(journey.destination),
+      departure: journey.departure,
+      arrival: journey.arrival,
+    }
   }
 }
 

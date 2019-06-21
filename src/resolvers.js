@@ -6,6 +6,9 @@ const resolvers = {
     stop: async (_, { id }, { dataSources }) => {
       return await dataSources.oebbAPI.getStopInfo(id)
     },
+    journeys: async (_, { from, to }, { dataSources }) => {
+      return await dataSources.oebbAPI.getJourneys(from, to)
+    },
   },
 }
 

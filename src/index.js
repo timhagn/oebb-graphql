@@ -22,5 +22,5 @@ const graphqlHandler = cors(apolloServer.createHandler({ path: graphqlPath }))
 module.exports = router(
   get('/', cors((req, res) => res.end('Welcome!'))),
   post(graphqlPath, graphqlHandler),
-  get(graphqlPath, graphqlHandler),
+  get(graphqlPath, graphqlHandler)
 )

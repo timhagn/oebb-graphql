@@ -1,0 +1,1213 @@
+{
+  "earlierRef": "1|OB|MT#11#95370#95356#95514#95528#0#0#485#95268#1#-2147483640#0#1#2|PDH#cc25df48146d723680646f2f0fa7daf5|RD#21062019|RT#34832",
+  "laterRef": "1|OF|MT#11#95430#95430#95572#95572#0#0#197093#95407#8#-2147470846#0#1#2|PDH#cc25df48146d723680646f2f0fa7daf5|RD#21062019|RT#34832",
+  "journeys": [
+    {
+      "type": "journey",
+      "legs": [
+        {
+          "origin": {
+            "type": "stop",
+            "id": "904008",
+            "name": "Wien Hbf/Südtiroler Pl. (Tiefgeschoß Straßenbahn)",
+            "location": {
+              "type": "location",
+              "id": "904008",
+              "latitude": 48.185966,
+              "longitude": 16.373995
+            },
+            "products": {
+              "nationalExpress": false,
+              "national": false,
+              "interregional": false,
+              "regional": false,
+              "suburban": false,
+              "bus": false,
+              "ferry": false,
+              "subway": false,
+              "tram": true,
+              "onCall": false
+            }
+          },
+          "destination": {
+            "type": "stop",
+            "id": "915005",
+            "name": "Wien Westbahnhof (Neubaugürtel Mitte/Westeingang)",
+            "location": {
+              "type": "location",
+              "id": "915005",
+              "latitude": 48.196888,
+              "longitude": 16.338865
+            },
+            "products": {
+              "nationalExpress": false,
+              "national": false,
+              "interregional": false,
+              "regional": false,
+              "suburban": false,
+              "bus": false,
+              "ferry": false,
+              "subway": false,
+              "tram": true,
+              "onCall": false
+            }
+          },
+          "departure": "2019-06-21T05:16:00+02:00",
+          "arrival": "2019-06-21T05:31:00+02:00",
+          "reachable": true,
+          "tripId": "1|463962|0|81|21062019",
+          "line": {
+            "type": "line",
+            "id": "tram-18",
+            "fahrtNr": "31141",
+            "name": "Tram 18",
+            "public": true,
+            "mode": "train",
+            "product": "tram",
+            "operator": {
+              "type": "operator",
+              "id": "wiener-linien-gmbh-co-kg",
+              "name": "Wiener Linien GmbH + Co KG"
+            }
+          },
+          "direction": "Wien Burggasse-Stadthalle (Äußerer Neubaugürtel)",
+          "arrivalPlatform": "B",
+          "departurePlatform": "H",
+          "cycle": {
+            "min": 360,
+            "max": 720,
+            "nr": 16
+          },
+          "alternatives": [
+            {
+              "tripId": "1|463963|0|81|21062019",
+              "line": {
+                "type": "line",
+                "id": "tram-18",
+                "fahrtNr": "31142",
+                "name": "Tram 18",
+                "public": true,
+                "mode": "train",
+                "product": "tram",
+                "operator": {
+                  "type": "operator",
+                  "id": "wiener-linien-gmbh-co-kg",
+                  "name": "Wiener Linien GmbH + Co KG"
+                }
+              },
+              "direction": "Wien Burggasse-Stadthalle (Äußerer Neubaugürtel)",
+              "when": "2019-06-21T05:28:00+02:00",
+              "delay": null
+            },
+            {
+              "tripId": "1|463963|1|81|21062019",
+              "line": {
+                "type": "line",
+                "id": "tram-18",
+                "fahrtNr": "31143",
+                "name": "Tram 18",
+                "public": true,
+                "mode": "train",
+                "product": "tram",
+                "operator": {
+                  "type": "operator",
+                  "id": "wiener-linien-gmbh-co-kg",
+                  "name": "Wiener Linien GmbH + Co KG"
+                }
+              },
+              "direction": "Wien Burggasse-Stadthalle (Äußerer Neubaugürtel)",
+              "when": "2019-06-21T05:39:00+02:00",
+              "delay": null
+            },
+            {
+              "tripId": "1|463962|1|81|21062019",
+              "line": {
+                "type": "line",
+                "id": "tram-18",
+                "fahrtNr": "31144",
+                "name": "Tram 18",
+                "public": true,
+                "mode": "train",
+                "product": "tram",
+                "operator": {
+                  "type": "operator",
+                  "id": "wiener-linien-gmbh-co-kg",
+                  "name": "Wiener Linien GmbH + Co KG"
+                }
+              },
+              "direction": "Wien Burggasse-Stadthalle (Äußerer Neubaugürtel)",
+              "when": "2019-06-21T05:49:00+02:00",
+              "delay": null
+            },
+            {
+              "tripId": "1|463964|0|81|21062019",
+              "line": {
+                "type": "line",
+                "id": "tram-18",
+                "fahrtNr": "31145",
+                "name": "Tram 18",
+                "public": true,
+                "mode": "train",
+                "product": "tram",
+                "operator": {
+                  "type": "operator",
+                  "id": "wiener-linien-gmbh-co-kg",
+                  "name": "Wiener Linien GmbH + Co KG"
+                }
+              },
+              "direction": "Wien Burggasse-Stadthalle (Äußerer Neubaugürtel)",
+              "when": "2019-06-21T05:59:00+02:00",
+              "delay": null
+            },
+            {
+              "tripId": "1|463965|0|81|21062019",
+              "line": {
+                "type": "line",
+                "id": "tram-18",
+                "fahrtNr": "31146",
+                "name": "Tram 18",
+                "public": true,
+                "mode": "train",
+                "product": "tram",
+                "operator": {
+                  "type": "operator",
+                  "id": "wiener-linien-gmbh-co-kg",
+                  "name": "Wiener Linien GmbH + Co KG"
+                }
+              },
+              "direction": "Wien Burggasse-Stadthalle (Äußerer Neubaugürtel)",
+              "when": "2019-06-21T06:08:00+02:00",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "origin": {
+            "type": "stop",
+            "id": "915005",
+            "name": "Wien Westbahnhof (Neubaugürtel Mitte/Westeingang)",
+            "location": {
+              "type": "location",
+              "id": "915005",
+              "latitude": 48.196888,
+              "longitude": 16.338865
+            },
+            "products": {
+              "nationalExpress": false,
+              "national": false,
+              "interregional": false,
+              "regional": false,
+              "suburban": false,
+              "bus": false,
+              "ferry": false,
+              "subway": false,
+              "tram": true,
+              "onCall": false
+            }
+          },
+          "destination": {
+            "type": "stop",
+            "id": "8100003",
+            "name": "Wien Westbahnhof",
+            "location": {
+              "type": "location",
+              "id": "8100003",
+              "latitude": 48.196366,
+              "longitude": 16.337328
+            },
+            "products": {
+              "nationalExpress": false,
+              "national": false,
+              "interregional": false,
+              "regional": true,
+              "suburban": true,
+              "bus": false,
+              "ferry": false,
+              "subway": false,
+              "tram": false,
+              "onCall": false
+            }
+          },
+          "departure": "2019-06-21T05:31:00+02:00",
+          "arrival": "2019-06-21T05:36:00+02:00",
+          "public": true,
+          "walking": true,
+          "distance": 120
+        },
+        {
+          "origin": {
+            "type": "stop",
+            "id": "8100003",
+            "name": "Wien Westbahnhof",
+            "location": {
+              "type": "location",
+              "id": "8100003",
+              "latitude": 48.196366,
+              "longitude": 16.337328
+            },
+            "products": {
+              "nationalExpress": false,
+              "national": false,
+              "interregional": false,
+              "regional": true,
+              "suburban": true,
+              "bus": false,
+              "ferry": false,
+              "subway": false,
+              "tram": false,
+              "onCall": false
+            }
+          },
+          "destination": {
+            "type": "stop",
+            "id": "8100002",
+            "name": "Salzburg Hbf",
+            "location": {
+              "type": "location",
+              "id": "8100002",
+              "latitude": 47.812851,
+              "longitude": 13.045604
+            },
+            "products": {
+              "nationalExpress": true,
+              "national": true,
+              "interregional": true,
+              "regional": true,
+              "suburban": true,
+              "bus": false,
+              "ferry": false,
+              "subway": false,
+              "tram": false,
+              "onCall": false
+            }
+          },
+          "departure": "2019-06-21T05:43:00+02:00",
+          "arrival": "2019-06-21T08:08:00+02:00",
+          "reachable": true,
+          "tripId": "1|394162|0|81|21062019",
+          "line": {
+            "type": "line",
+            "id": "wb-900",
+            "fahrtNr": "900",
+            "name": "WB 900",
+            "public": true,
+            "mode": "train",
+            "product": "interregional",
+            "operator": {
+              "type": "operator",
+              "id": "westbahn-management-gmbh",
+              "name": "WESTbahn Management GmbH"
+            }
+          },
+          "direction": "Salzburg Hbf",
+          "arrivalPlatform": "3A-C",
+          "departurePlatform": "2",
+          "cycle": {
+            "min": 3600,
+            "max": 3600,
+            "nr": 3
+          }
+        }
+      ],
+      "refreshToken": "¶HKI¶T$A=1@O=Wien Hbf/Südtiroler Pl. (Tiefgeschoß Straßenbahn)@L=904008@a=128@$A=1@O=Wien Westbahnhof (Neubaugürtel Mitte/Westeingang)@L=915005@a=128@$201906210516$201906210531$Tram 18 $$1$§W$A=1@O=Wien Westbahnhof (Neubaugürtel Mitte/Westeingang)@L=915005@a=128@$A=1@O=Wien Westbahnhof@L=8100003@a=128@$201906210531$201906210536$$$1$§T$A=1@O=Wien Westbahnhof@L=8100003@a=128@$A=1@O=Salzburg Hbf@L=8100002@a=128@$201906210543$201906210808$WB 900  $$1$¶KC¶%23VE%230%23CF%23100%23CA%230%23CM%230%23SICT%230%23¶KCC¶%23VE%230%23ERG%2345059%23HIN%230%23ECK%2395370%7C95356%7C95514%7C95528%7C0%7C0%7C485%7C95268%7C1%7C-2147483640%7C0%23",
+      "cycle": {
+        "min": 3600
+      }
+    },
+    {
+      "type": "journey",
+      "legs": [
+        {
+          "origin": {
+            "type": "stop",
+            "id": "8103000",
+            "name": "Wien Hbf",
+            "location": {
+              "type": "location",
+              "id": "8103000",
+              "latitude": 48.184564,
+              "longitude": 16.378526
+            },
+            "products": {
+              "nationalExpress": true,
+              "national": false,
+              "interregional": true,
+              "regional": true,
+              "suburban": true,
+              "bus": false,
+              "ferry": false,
+              "subway": false,
+              "tram": false,
+              "onCall": false
+            }
+          },
+          "destination": {
+            "type": "stop",
+            "id": "8100514",
+            "name": "Wien Meidling Bahnhof",
+            "location": {
+              "type": "location",
+              "id": "8100514",
+              "latitude": 48.174585,
+              "longitude": 16.333733
+            },
+            "products": {
+              "nationalExpress": true,
+              "national": false,
+              "interregional": true,
+              "regional": true,
+              "suburban": true,
+              "bus": false,
+              "ferry": false,
+              "subway": false,
+              "tram": false,
+              "onCall": false
+            }
+          },
+          "departure": "2019-06-21T05:20:00+02:00",
+          "arrival": "2019-06-21T05:24:00+02:00",
+          "reachable": true,
+          "departureDelay": 0,
+          "arrivalDelay": 0,
+          "tripId": "1|394213|0|81|21062019",
+          "line": {
+            "type": "line",
+            "id": "rex-9970",
+            "fahrtNr": "9970",
+            "name": "REX 9970",
+            "public": true,
+            "mode": "train",
+            "product": "regional",
+            "operator": {
+              "type": "operator",
+              "id": "nahreisezug",
+              "name": "Nahreisezug"
+            }
+          },
+          "direction": "Deutschkreutz Bahnhof",
+          "arrivalPlatform": "8",
+          "departurePlatform": "6A-C",
+          "cycle": {
+            "min": 180,
+            "max": 3600,
+            "nr": 6
+          },
+          "alternatives": [
+            {
+              "tripId": "1|393745|0|81|21062019",
+              "line": {
+                "type": "line",
+                "id": "r-7902",
+                "fahrtNr": "7902",
+                "name": "R 7902",
+                "public": true,
+                "mode": "train",
+                "product": "regional",
+                "operator": {
+                  "type": "operator",
+                  "id": "gysev",
+                  "name": "GySEV"
+                }
+              },
+              "direction": "Wr.Neustadt Hbf",
+              "when": "2019-06-21T06:12:00+02:00",
+              "delay": null
+            },
+            {
+              "tripId": "1|393584|0|81|21062019",
+              "line": {
+                "type": "line",
+                "id": "r-7403",
+                "fahrtNr": "7403",
+                "name": "R 7403",
+                "public": true,
+                "mode": "train",
+                "product": "regional",
+                "operator": {
+                  "type": "operator",
+                  "id": "nahreisezug",
+                  "name": "Nahreisezug"
+                }
+              },
+              "direction": "Laxenburg-Biedermannsdorf Bahnhof",
+              "when": "2019-06-21T06:15:00+02:00",
+              "delay": null
+            },
+            {
+              "tripId": "1|393636|0|81|21062019",
+              "line": {
+                "type": "line",
+                "id": "rex-7602",
+                "fahrtNr": "7602",
+                "name": "REX 7602",
+                "public": true,
+                "mode": "train",
+                "product": "regional",
+                "operator": {
+                  "type": "operator",
+                  "id": "nahreisezug",
+                  "name": "Nahreisezug"
+                }
+              },
+              "direction": "Deutschkreutz Bahnhof",
+              "when": "2019-06-21T06:19:00+02:00",
+              "delay": null
+            },
+            {
+              "tripId": "1|393588|0|81|21062019",
+              "line": {
+                "type": "line",
+                "id": "r-7405",
+                "fahrtNr": "7405",
+                "name": "R 7405",
+                "public": true,
+                "mode": "train",
+                "product": "regional",
+                "operator": {
+                  "type": "operator",
+                  "id": "nahreisezug",
+                  "name": "Nahreisezug"
+                }
+              },
+              "direction": "Laxenburg-Biedermannsdorf Bahnhof",
+              "when": "2019-06-21T07:15:00+02:00",
+              "delay": null
+            },
+            {
+              "tripId": "1|388063|0|81|21062019",
+              "line": {
+                "type": "line",
+                "id": "rex-7604",
+                "fahrtNr": "7604",
+                "name": "REX 7604",
+                "public": true,
+                "mode": "train",
+                "product": "regional",
+                "operator": {
+                  "type": "operator",
+                  "id": "nahreisezug",
+                  "name": "Nahreisezug"
+                }
+              },
+              "direction": "Deutschkreutz Bahnhof",
+              "when": "2019-06-21T07:19:00+02:00",
+              "delay": null
+            }
+          ]
+        },
+        {
+          "origin": {
+            "type": "stop",
+            "id": "8100514",
+            "name": "Wien Meidling Bahnhof",
+            "location": {
+              "type": "location",
+              "id": "8100514",
+              "latitude": 48.174585,
+              "longitude": 16.333733
+            },
+            "products": {
+              "nationalExpress": true,
+              "national": false,
+              "interregional": true,
+              "regional": true,
+              "suburban": true,
+              "bus": false,
+              "ferry": false,
+              "subway": false,
+              "tram": false,
+              "onCall": false
+            }
+          },
+          "destination": {
+            "type": "stop",
+            "id": "912005",
+            "name": "Wien Meidling Bf (U6)",
+            "location": {
+              "type": "location",
+              "id": "912005",
+              "latitude": 48.174127,
+              "longitude": 16.331449
+            },
+            "products": {
+              "nationalExpress": false,
+              "national": false,
+              "interregional": false,
+              "regional": false,
+              "suburban": false,
+              "bus": false,
+              "ferry": false,
+              "subway": true,
+              "tram": false,
+              "onCall": false
+            }
+          },
+          "departure": "2019-06-21T05:24:00+02:00",
+          "arrival": "2019-06-21T05:30:00+02:00",
+          "public": true,
+          "walking": true,
+          "distance": 177
+        },
+        {
+          "origin": {
+            "type": "stop",
+            "id": "912005",
+            "name": "Wien Meidling Bf (U6)",
+            "location": {
+              "type": "location",
+              "id": "912005",
+              "latitude": 48.174127,
+              "longitude": 16.331449
+            },
+            "products": {
+              "nationalExpress": false,
+              "national": false,
+              "interregional": false,
+              "regional": false,
+              "suburban": false,
+              "bus": false,
+              "ferry": false,
+              "subway": true,
+              "tram": false,
+              "onCall": false
+            }
+          },
+          "destination": {
+            "type": "stop",
+            "id": "915006",
+            "name": "Wien Westbahnhof (U6)",
+            "location": {
+              "type": "location",
+              "id": "915006",
+              "latitude": 48.19696,
+              "longitude": 16.339144
+            },
+            "products": {
+              "nationalExpress": false,
+              "national": false,
+              "interregional": false,
+              "regional": false,
+              "suburban": false,
+              "bus": false,
+              "ferry": false,
+              "subway": true,
+              "tram": false,
+              "onCall": false
+            }
+          },
+          "departure": "2019-06-21T05:30:00+02:00",
+          "arrival": "2019-06-21T05:36:00+02:00",
+          "reachable": true,
+          "tripId": "1|450599|0|81|21062019",
+          "line": {
+            "type": "line",
+            "id": "u6",
+            "fahrtNr": "23925",
+            "name": "U6",
+            "public": true,
+            "mode": "train",
+            "product": "subway",
+            "operator": {
+              "type": "operator",
+              "id": "wiener-linien-gmbh-co-kg",
+              "name": "Wiener Linien GmbH + Co KG"
+            }
+          },
+          "direction": "Wien Floridsdorf Bf (U6)",
+          "arrivalPlatform": "1",
+          "departurePlatform": "1",
+          "cycle": {
+            "min": 180,
+            "max": 240,
+            "nr": 33
+          }
+        },
+        {
+          "origin": {
+            "type": "stop",
+            "id": "915006",
+            "name": "Wien Westbahnhof (U6)",
+            "location": {
+              "type": "location",
+              "id": "915006",
+              "latitude": 48.19696,
+              "longitude": 16.339144
+            },
+            "products": {
+              "nationalExpress": false,
+              "national": false,
+              "interregional": false,
+              "regional": false,
+              "suburban": false,
+              "bus": false,
+              "ferry": false,
+              "subway": true,
+              "tram": false,
+              "onCall": false
+            }
+          },
+          "destination": {
+            "type": "stop",
+            "id": "8100003",
+            "name": "Wien Westbahnhof",
+            "location": {
+              "type": "location",
+              "id": "8100003",
+              "latitude": 48.196366,
+              "longitude": 16.337328
+            },
+            "products": {
+              "nationalExpress": false,
+              "national": false,
+              "interregional": false,
+              "regional": true,
+              "suburban": true,
+              "bus": false,
+              "ferry": false,
+              "subway": false,
+              "tram": false,
+              "onCall": false
+            }
+          },
+          "departure": "2019-06-21T05:36:00+02:00",
+          "arrival": "2019-06-21T05:43:00+02:00",
+          "public": true,
+          "walking": true,
+          "distance": 142
+        },
+        {
+          "origin": {
+            "type": "stop",
+            "id": "8100003",
+            "name": "Wien Westbahnhof",
+            "location": {
+              "type": "location",
+              "id": "8100003",
+              "latitude": 48.196366,
+              "longitude": 16.337328
+            },
+            "products": {
+              "nationalExpress": false,
+              "national": false,
+              "interregional": false,
+              "regional": true,
+              "suburban": true,
+              "bus": false,
+              "ferry": false,
+              "subway": false,
+              "tram": false,
+              "onCall": false
+            }
+          },
+          "destination": {
+            "type": "stop",
+            "id": "8100002",
+            "name": "Salzburg Hbf",
+            "location": {
+              "type": "location",
+              "id": "8100002",
+              "latitude": 47.812851,
+              "longitude": 13.045604
+            },
+            "products": {
+              "nationalExpress": true,
+              "national": true,
+              "interregional": true,
+              "regional": true,
+              "suburban": true,
+              "bus": false,
+              "ferry": false,
+              "subway": false,
+              "tram": false,
+              "onCall": false
+            }
+          },
+          "departure": "2019-06-21T05:43:00+02:00",
+          "arrival": "2019-06-21T08:08:00+02:00",
+          "reachable": true,
+          "tripId": "1|394162|0|81|21062019",
+          "line": {
+            "type": "line",
+            "id": "wb-900",
+            "fahrtNr": "900",
+            "name": "WB 900",
+            "public": true,
+            "mode": "train",
+            "product": "interregional",
+            "operator": {
+              "type": "operator",
+              "id": "westbahn-management-gmbh",
+              "name": "WESTbahn Management GmbH"
+            }
+          },
+          "direction": "Salzburg Hbf",
+          "arrivalPlatform": "3A-C",
+          "departurePlatform": "2",
+          "cycle": {
+            "min": 3600,
+            "max": 3600,
+            "nr": 3
+          }
+        }
+      ],
+      "refreshToken": "¶HKI¶T$A=1@O=Wien Hbf@L=8103000@a=128@$A=1@O=Wien Meidling Bahnhof@L=8100514@a=128@$201906210520$201906210524$REX 9970$$1$§W$A=1@O=Wien Meidling Bahnhof@L=8100514@a=128@$A=1@O=Wien Meidling Bf (U6)@L=912005@a=128@$201906210524$201906210530$$$1$§T$A=1@O=Wien Meidling Bf (U6)@L=912005@a=128@$A=1@O=Wien Westbahnhof (U6)@L=915006@a=128@$201906210530$201906210536$U6      $$1$§W$A=1@O=Wien Westbahnhof (U6)@L=915006@a=128@$A=1@O=Wien Westbahnhof@L=8100003@a=128@$201906210536$201906210543$$$1$§T$A=1@O=Wien Westbahnhof@L=8100003@a=128@$A=1@O=Salzburg Hbf@L=8100002@a=128@$201906210543$201906210808$WB 900  $$1$¶KC¶%23VE%230%23CF%23100%23CA%230%23CM%230%23SICT%230%23¶KCC¶%23VE%230%23ERG%2345061%23HIN%230%23ECK%2395370%7C95360%7C95514%7C95528%7C0%7C0%7C485%7C95268%7C2%7C-2147483640%7C0%23",
+      "cycle": {
+        "min": 3600
+      }
+    },
+    {
+      "type": "journey",
+      "legs": [
+        {
+          "origin": {
+            "type": "stop",
+            "id": "8103000",
+            "name": "Wien Hbf",
+            "location": {
+              "type": "location",
+              "id": "8103000",
+              "latitude": 48.184564,
+              "longitude": 16.378526
+            },
+            "products": {
+              "nationalExpress": true,
+              "national": false,
+              "interregional": true,
+              "regional": true,
+              "suburban": true,
+              "bus": false,
+              "ferry": false,
+              "subway": false,
+              "tram": false,
+              "onCall": false
+            }
+          },
+          "destination": {
+            "type": "stop",
+            "id": "8100002",
+            "name": "Salzburg Hbf",
+            "location": {
+              "type": "location",
+              "id": "8100002",
+              "latitude": 47.812851,
+              "longitude": 13.045604
+            },
+            "products": {
+              "nationalExpress": true,
+              "national": true,
+              "interregional": true,
+              "regional": true,
+              "suburban": true,
+              "bus": false,
+              "ferry": false,
+              "subway": false,
+              "tram": false,
+              "onCall": false
+            }
+          },
+          "departure": "2019-06-21T05:30:00+02:00",
+          "arrival": "2019-06-21T07:54:00+02:00",
+          "reachable": true,
+          "tripId": "1|385046|0|81|21062019",
+          "line": {
+            "type": "line",
+            "id": "rjx-368",
+            "fahrtNr": "368",
+            "name": "RJX 368",
+            "public": true,
+            "mode": "train",
+            "product": "nationalExpress",
+            "operator": {
+              "type": "operator",
+              "id": "nahreisezug",
+              "name": "Nahreisezug"
+            }
+          },
+          "direction": "Zürich HB",
+          "arrivalPlatform": "3",
+          "departurePlatform": "8",
+          "cycle": {
+            "min": 1500,
+            "max": 2100,
+            "nr": 5
+          },
+          "alternatives": [
+            {
+              "tripId": "1|392671|0|81|21062019",
+              "line": {
+                "type": "line",
+                "id": "rj-540",
+                "fahrtNr": "540",
+                "name": "RJ 540",
+                "public": true,
+                "mode": "train",
+                "product": "nationalExpress",
+                "operator": {
+                  "type": "operator",
+                  "id": "nahreisezug",
+                  "name": "Nahreisezug"
+                }
+              },
+              "direction": "Salzburg Hbf",
+              "when": "2019-06-21T05:55:00+02:00",
+              "delay": null
+            },
+            {
+              "tripId": "1|383928|0|81|21062019",
+              "line": {
+                "type": "line",
+                "id": "rjx-260",
+                "fahrtNr": "260",
+                "name": "RJX 260",
+                "public": true,
+                "mode": "train",
+                "product": "nationalExpress",
+                "operator": {
+                  "type": "operator",
+                  "id": "nahreisezug",
+                  "name": "Nahreisezug"
+                }
+              },
+              "direction": "München Hbf",
+              "when": "2019-06-21T06:30:00+02:00",
+              "delay": null
+            },
+            {
+              "tripId": "1|392671|1|81|21062019",
+              "line": {
+                "type": "line",
+                "id": "rj-542",
+                "fahrtNr": "542",
+                "name": "RJ 542",
+                "public": true,
+                "mode": "train",
+                "product": "nationalExpress",
+                "operator": {
+                  "type": "operator",
+                  "id": "nahreisezug",
+                  "name": "Nahreisezug"
+                }
+              },
+              "direction": "Salzburg Hbf",
+              "when": "2019-06-21T06:55:00+02:00",
+              "delay": null
+            },
+            {
+              "tripId": "1|382231|0|81|21062019",
+              "line": {
+                "type": "line",
+                "id": "rjx-160",
+                "fahrtNr": "160",
+                "name": "RJX 160",
+                "public": true,
+                "mode": "train",
+                "product": "nationalExpress",
+                "operator": {
+                  "type": "operator",
+                  "id": "nahreisezug",
+                  "name": "Nahreisezug"
+                }
+              },
+              "direction": "Zürich HB",
+              "when": "2019-06-21T07:30:00+02:00",
+              "delay": null
+            },
+            {
+              "tripId": "1|393316|0|81|21062019",
+              "line": {
+                "type": "line",
+                "id": "rj-662",
+                "fahrtNr": "662",
+                "name": "RJ 662",
+                "public": true,
+                "mode": "train",
+                "product": "nationalExpress",
+                "operator": {
+                  "type": "operator",
+                  "id": "nahreisezug",
+                  "name": "Nahreisezug"
+                }
+              },
+              "direction": "Bregenz Bahnhof",
+              "when": "2019-06-21T07:55:00+02:00",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "refreshToken": "¶HKI¶T$A=1@O=Wien Hbf@L=8103000@a=128@$A=1@O=Salzburg Hbf@L=8100002@a=128@$201906210530$201906210754$RJX 368 $$1$¶KC¶%23VE%230%23CF%23100%23CA%230%23CM%230%23SICT%230%23¶KCC¶%23VE%230%23ERG%231%23HIN%230%23ECK%2395370%7C95370%7C95514%7C95514%7C0%7C0%7C485%7C95268%7C3%7C-2147454462%7C0%23",
+      "cycle": {
+        "min": 1500
+      }
+    },
+    {
+      "type": "journey",
+      "legs": [
+        {
+          "origin": {
+            "type": "stop",
+            "id": "8103000",
+            "name": "Wien Hbf",
+            "location": {
+              "type": "location",
+              "id": "8103000",
+              "latitude": 48.184564,
+              "longitude": 16.378526
+            },
+            "products": {
+              "nationalExpress": true,
+              "national": false,
+              "interregional": true,
+              "regional": true,
+              "suburban": true,
+              "bus": false,
+              "ferry": false,
+              "subway": false,
+              "tram": false,
+              "onCall": false
+            }
+          },
+          "destination": {
+            "type": "stop",
+            "id": "8100002",
+            "name": "Salzburg Hbf",
+            "location": {
+              "type": "location",
+              "id": "8100002",
+              "latitude": 47.812851,
+              "longitude": 13.045604
+            },
+            "products": {
+              "nationalExpress": true,
+              "national": true,
+              "interregional": true,
+              "regional": true,
+              "suburban": true,
+              "bus": false,
+              "ferry": false,
+              "subway": false,
+              "tram": false,
+              "onCall": false
+            }
+          },
+          "departure": "2019-06-21T05:55:00+02:00",
+          "arrival": "2019-06-21T08:48:00+02:00",
+          "reachable": true,
+          "tripId": "1|392671|0|81|21062019",
+          "line": {
+            "type": "line",
+            "id": "rj-540",
+            "fahrtNr": "540",
+            "name": "RJ 540",
+            "public": true,
+            "mode": "train",
+            "product": "nationalExpress",
+            "operator": {
+              "type": "operator",
+              "id": "nahreisezug",
+              "name": "Nahreisezug"
+            }
+          },
+          "direction": "Salzburg Hbf",
+          "arrivalPlatform": "2",
+          "departurePlatform": "8A-C",
+          "scheduledDeparturePlatform": "8A-B",
+          "cycle": {
+            "min": 1500,
+            "max": 2100,
+            "nr": 5
+          },
+          "alternatives": [
+            {
+              "tripId": "1|383928|0|81|21062019",
+              "line": {
+                "type": "line",
+                "id": "rjx-260",
+                "fahrtNr": "260",
+                "name": "RJX 260",
+                "public": true,
+                "mode": "train",
+                "product": "nationalExpress",
+                "operator": {
+                  "type": "operator",
+                  "id": "nahreisezug",
+                  "name": "Nahreisezug"
+                }
+              },
+              "direction": "München Hbf",
+              "when": "2019-06-21T06:30:00+02:00",
+              "delay": null
+            },
+            {
+              "tripId": "1|392671|1|81|21062019",
+              "line": {
+                "type": "line",
+                "id": "rj-542",
+                "fahrtNr": "542",
+                "name": "RJ 542",
+                "public": true,
+                "mode": "train",
+                "product": "nationalExpress",
+                "operator": {
+                  "type": "operator",
+                  "id": "nahreisezug",
+                  "name": "Nahreisezug"
+                }
+              },
+              "direction": "Salzburg Hbf",
+              "when": "2019-06-21T06:55:00+02:00",
+              "delay": null
+            },
+            {
+              "tripId": "1|382231|0|81|21062019",
+              "line": {
+                "type": "line",
+                "id": "rjx-160",
+                "fahrtNr": "160",
+                "name": "RJX 160",
+                "public": true,
+                "mode": "train",
+                "product": "nationalExpress",
+                "operator": {
+                  "type": "operator",
+                  "id": "nahreisezug",
+                  "name": "Nahreisezug"
+                }
+              },
+              "direction": "Zürich HB",
+              "when": "2019-06-21T07:30:00+02:00",
+              "delay": null
+            },
+            {
+              "tripId": "1|393316|0|81|21062019",
+              "line": {
+                "type": "line",
+                "id": "rj-662",
+                "fahrtNr": "662",
+                "name": "RJ 662",
+                "public": true,
+                "mode": "train",
+                "product": "nationalExpress",
+                "operator": {
+                  "type": "operator",
+                  "id": "nahreisezug",
+                  "name": "Nahreisezug"
+                }
+              },
+              "direction": "Bregenz Bahnhof",
+              "when": "2019-06-21T07:55:00+02:00",
+              "delay": null
+            },
+            {
+              "tripId": "1|383965|0|81|21062019",
+              "line": {
+                "type": "line",
+                "id": "rjx-262",
+                "fahrtNr": "262",
+                "name": "RJX 262",
+                "public": true,
+                "mode": "train",
+                "product": "nationalExpress",
+                "operator": {
+                  "type": "operator",
+                  "id": "nahreisezug",
+                  "name": "Nahreisezug"
+                }
+              },
+              "direction": "München Hbf",
+              "when": "2019-06-21T08:30:00+02:00",
+              "delay": null
+            }
+          ]
+        }
+      ],
+      "refreshToken": "¶HKI¶T$A=1@O=Wien Hbf@L=8103000@a=128@$A=1@O=Salzburg Hbf@L=8100002@a=128@$201906210555$201906210848$RJ 540  $$1$¶KC¶%23VE%230%23CF%23100%23CA%230%23CM%230%23SICT%230%23¶KCC¶%23VE%230%23ERG%2345569%23HIN%230%23ECK%2395406%7C95395%7C95558%7C95568%7C0%7C0%7C485%7C95371%7C4%7C-2147454464%7C0%23",
+      "cycle": {
+        "min": 1500
+      }
+    },
+    {
+      "type": "journey",
+      "legs": [
+        {
+          "origin": {
+            "type": "stop",
+            "id": "8101590",
+            "name": "Wien Hbf (Bahnsteige 1-2)",
+            "location": {
+              "type": "location",
+              "id": "8101590",
+              "latitude": 48.18602,
+              "longitude": 16.375137
+            },
+            "products": {
+              "nationalExpress": false,
+              "national": false,
+              "interregional": false,
+              "regional": true,
+              "suburban": true,
+              "bus": false,
+              "ferry": false,
+              "subway": false,
+              "tram": false,
+              "onCall": false
+            }
+          },
+          "destination": {
+            "type": "stop",
+            "id": "8100002",
+            "name": "Salzburg Hbf",
+            "location": {
+              "type": "location",
+              "id": "8100002",
+              "latitude": 47.812851,
+              "longitude": 13.045604
+            },
+            "products": {
+              "nationalExpress": true,
+              "national": true,
+              "interregional": true,
+              "regional": true,
+              "suburban": true,
+              "bus": false,
+              "ferry": false,
+              "subway": false,
+              "tram": false,
+              "onCall": false
+            }
+          },
+          "departure": "2019-06-21T06:06:00+02:00",
+          "arrival": "2019-06-21T08:38:00+02:00",
+          "reachable": true,
+          "tripId": "1|394198|0|81|21062019",
+          "line": {
+            "type": "line",
+            "id": "wb-950",
+            "fahrtNr": "950",
+            "name": "WB 950",
+            "public": true,
+            "mode": "train",
+            "product": "interregional",
+            "operator": {
+              "type": "operator",
+              "id": "westbahn-management-gmbh",
+              "name": "WESTbahn Management GmbH"
+            }
+          },
+          "direction": "Salzburg Hbf",
+          "arrivalPlatform": "1",
+          "departurePlatform": "1",
+          "cycle": {
+            "min": 3600,
+            "max": 3600,
+            "nr": 3
+          }
+        }
+      ],
+      "refreshToken": "¶HKI¶T$A=1@O=Wien Hbf (Bahnsteige 1-2)@L=8101590@a=128@$A=1@O=Salzburg Hbf@L=8100002@a=128@$201906210606$201906210838$WB 950  $$1$¶KC¶%23VE%230%23CF%23100%23CA%230%23CM%230%23SICT%230%23¶KCC¶%23VE%230%23ERG%231%23HIN%230%23ECK%2395406%7C95406%7C95558%7C95558%7C0%7C0%7C485%7C95371%7C5%7C-2147479526%7C0%23",
+      "cycle": {
+        "min": 3600
+      }
+    }
+  ]
+}
