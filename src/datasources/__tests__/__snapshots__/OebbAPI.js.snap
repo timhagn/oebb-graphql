@@ -106,7 +106,7 @@ Array [
     "products": Object {
       "bus": true,
       "ferry": false,
-      "interregional": false,
+      "interregional": true,
       "national": false,
       "nationalExpress": false,
       "onCall": false,
@@ -133,7 +133,7 @@ Object {
   "products": Object {
     "bus": false,
     "ferry": false,
-    "interregional": false,
+    "interregional": true,
     "national": false,
     "nationalExpress": false,
     "onCall": false,
@@ -143,5 +143,47 @@ Object {
     "tram": false,
   },
   "type": "stop",
+}
+`;
+
+exports[`[OebbAPI].legReducer legReducer() returns a "reduced" leg 1`] = `
+Object {
+  "arrival": "test",
+  "arrivalPlatform": "test",
+  "departure": "test",
+  "departurePlatform": "test",
+  "destination": Object {
+    "geo": "test",
+    "id": "test",
+    "name": "test",
+    "products": "test",
+    "type": "test",
+  },
+  "direction": "test",
+  "distance": 10,
+  "line": Object {
+    "fahrtNr": "test",
+    "id": "test",
+    "mode": "test",
+    "name": "test",
+    "operator": Object {
+      "id": "test",
+      "name": "test",
+      "type": "test",
+    },
+    "product": "test",
+    "public": "test",
+    "type": "test",
+  },
+  "origin": Object {
+    "geo": "test",
+    "id": "test",
+    "name": "test",
+    "products": "test",
+    "type": "test",
+  },
+  "reachable": "test",
+  "tripId": "test",
+  "walking": true,
 }
 `;
