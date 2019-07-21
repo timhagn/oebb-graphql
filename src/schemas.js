@@ -14,6 +14,14 @@ const typeDefs = gql`
     ): Journeys
   }
 
+  type Mutation {
+      login(username: String!, password: String!): LoginResponse!
+  }
+
+  type LoginResponse {
+      token: String
+  }
+
   type Location {
     id: ID
     type: String
