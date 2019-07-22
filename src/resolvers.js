@@ -10,21 +10,21 @@ const resolvers = {
   DateTime: GraphQLDateTime,
   Query: {
     locations: async (_, { name }, { dataSources, user }) => {
-      if (!user) {
-        throw new Error('Not Authenticated')
-      }
+      // if (!user) {
+      //   throw new Error('Not Authenticated')
+      // }
       return await dataSources.oebbAPI.getLocations(name)
     },
     stop: async (_, { id }, { dataSources, user }) => {
-      if (!user) {
-        throw new Error('Not Authenticated')
-      }
+      // if (!user) {
+      //   throw new Error('Not Authenticated')
+      // }
       return await dataSources.oebbAPI.getStopInfo(id)
     },
     journeys: async (_, args, { dataSources, user }) => {
-      if (!user) {
-        throw new Error('Not Authenticated')
-      }
+      // if (!user) {
+      //   throw new Error('Not Authenticated')
+      // }
       const { from, to, ...otherArgs } = args
 
       return await dataSources.oebbAPI.getJourneys(from, to, otherArgs)
